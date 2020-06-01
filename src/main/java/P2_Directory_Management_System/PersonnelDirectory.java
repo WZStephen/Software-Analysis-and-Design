@@ -1,4 +1,4 @@
-package Directory_Management_System;
+package P2_Directory_Management_System;
 
 import java.util.Scanner;
 public class PersonnelDirectory

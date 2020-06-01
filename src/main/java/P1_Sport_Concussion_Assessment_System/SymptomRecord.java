@@ -1,4 +1,4 @@
-package Sport_Concussion_Assessment_System;
+package P1_Sport_Concussion_Assessment_System;
 
 public class SymptomRecord {
 //    List<Game_Record.Symptom> five_games = new ArrayList<>();

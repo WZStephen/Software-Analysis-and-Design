@@ -1,4 +1,4 @@
-package Directory_Management_System;
+package P2_Directory_Management_System;
 
 public class Employee extends Person{
 	private int empID;

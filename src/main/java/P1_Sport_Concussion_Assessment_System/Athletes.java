@@ -1,4 +1,4 @@
-package Sport_Concussion_Assessment_System;
+package P1_Sport_Concussion_Assessment_System;
 
 import java.util.ArrayList;
 import java.util.List;
