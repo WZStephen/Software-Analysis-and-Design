@@ -57,11 +57,12 @@ public class PersonnelDirectory
 
 					boolean found = false;
 					int loc =-1;
-					for(int i =0; i <per.personList.size(); i++) {
-					if( per.personList.get(i).first.equals(firstN) && per.personList.get(i).last.equals(lastN)) {
-					found = true;
-					loc = i;
-					}
+				  	ArrayList<Person> personList = per.getPersonList();
+					for(int i =0; i <personList.size(); i++) {
+						if(personList.get(i).first.equals(firstN) && personList.get(i).last.equals(lastN)) {
+							found = true;
+							loc = i;
+						}
 					}
 
 					if(found) {
@@ -89,9 +90,9 @@ public class PersonnelDirectory
 					break;
 
 			  case 5:
-					Personnel tmp = new Personnel();
-					ArrayList<Person> temp = tmp.getPersonList();
-				  break;
+					ArrayList<Person> temp = per.getPersonList();
+				  	System.out.println();
+				  	break;
 		  }
 
 	  } while(true);
