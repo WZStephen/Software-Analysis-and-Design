@@ -9,9 +9,11 @@ public class Personnel {
 	   personList = new ArrayList<Person>();
 	}
 
+	public ArrayList<Person> getPersonList(){
+		return personList;
+	}
+
 	public void addPersonnel(Person p) {
 		personList.add(p);
 	}
-
-
 }
