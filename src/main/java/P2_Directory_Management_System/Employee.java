@@ -11,9 +11,7 @@ public class Employee extends Person{
 		baseSalary = sal;
 
 	}
-
-	public int getID()
-	{
+	public int getID() {
 		return empID;
 
 	}

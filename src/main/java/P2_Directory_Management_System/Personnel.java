@@ -9,8 +9,7 @@ public class Personnel {
 	   personList = new ArrayList<Person>();
 	}
 
-	public void addPersonnel(Person p)
-	{
+	public void addPersonnel(Person p) {
 		personList.add(p);
 	}
 

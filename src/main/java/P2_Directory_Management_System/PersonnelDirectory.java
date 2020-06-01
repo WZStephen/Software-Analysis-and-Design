@@ -3,23 +3,17 @@ package P2_Directory_Management_System;
 import java.util.Scanner;
 public class PersonnelDirectory
 {
-
-
-
    public static void main(String[] args)
    {
-              Personnel per = new Personnel();
-			  totalObjects total = new totalObjects();
-			  Scanner scan = new Scanner(System.in);
-			  String firstN, lastN, middleN;
-			  int empID;
-			  double salary;
-              int choice = -1;
-
+	  Personnel per = new Personnel();
+	  totalObjects total = new totalObjects();
+	  Scanner scan = new Scanner(System.in);
+	  String firstN, lastN, middleN;
+	  int empID;
+	  double salary;
+	  int choice = -1;
 
       do{
-
-
           System.out.println("Welcome to the Directory_Management_System.Personnel Directory Management System");
           System.out.println("====================================================");
 
@@ -49,51 +43,44 @@ public class PersonnelDirectory
 			  scan.nextLine();
 
 			  Employee e1  = new Employee(lastN, firstN, middleN, empID, salary);
-
-
 			  per.addPersonnel(e1);
 			  total.objectAdded();
 
 			  break;
 
 			  case 2:
-
 			  System.out.println("Enter firts name : ");
 			  firstN = scan.nextLine();
 
 			  System.out.println("Enter last name : ");
 			  lastN = scan.nextLine();
 
+			  boolean found = false;
+			  int loc =-1;
+			  for(int i =0; i <per.personList.size(); i++)
+			  {
+				if( per.personList.get(i).first.equals(firstN) && per.personList.get(i).last.equals(lastN))
+				{
+				found = true;
+				loc = i;
+				}
+			  }
 
+			  if(found)
+			  {
+				  System.out.println("Found");
+				  per.personList.get(loc).printName(0);
 
-                                  boolean found = false;
-			  		 			   int loc =-1;
-			  		 			  for(int i =0; i <per.personList.size(); i++)
-			  		 			  {
-			  		 				if( per.personList.get(i).first.equals(firstN) && per.personList.get(i).last.equals(lastN))
-			  		 				{
-			  		 				found = true;
-			  		 			    loc = i;
-			  		 			    }
-			  		 			  }
-
-			  		 			  if(found)
-			  		 			  {
-			  		 				  System.out.println("Found");
-			  		 				  per.personList.get(loc).printName(0);
-
-			  		 			  }else
-			  		 			  {
-			  		 				  System.out.println("not found");
-			  		 				  Person p1  = new Person(lastN, firstN, " ");
-			  		 				  per.personList.add(p1);
-			  		 				  total.objectAdded();
-			                      }
-
+			  }else
+			  {
+				  System.out.println("not found");
+				  Person p1  = new Person(lastN, firstN, " ");
+				  per.personList.add(p1);
+				  total.objectAdded();
+			  }
               break;
 
 			  case 3:
-
 			  System.out.println("Enter the order 0: first, middle,  last, 1: first, last, middle, 2: last, first , middle ");
 			  int order = scan.nextInt();
 			  for(int i=0; i<per.personList.size(); i++)
@@ -101,19 +88,14 @@ public class PersonnelDirectory
 
 				  per.personList.get(i).printName(order);
 			  }
-
-               break;
+			  break;
 
 			  case 4:
 			  System.out.println("Total Entries : " + total.getTotalObjects());
-
-               break;
-
+			  break;
 		  }
 
-		 } while(true);
-
-
-  }
+	  } while(true);
+   }
 
 }
