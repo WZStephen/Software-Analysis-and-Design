@@ -1,18 +1,15 @@
-package test;
+package P2_Directory_Management_System_Phase_I;
+
 public class Employee extends Person{
 	private int empID;
 	private double baseSalary;
-
-
 	public Employee(String last, String first, String middle, int id, double sal) {
 		super(last, first, middle);
 		empID = id;
 		baseSalary = sal;
-
 	}
 
-	public int getID()
-	{
+	public int getID() {
 		return empID;
 
 	}
