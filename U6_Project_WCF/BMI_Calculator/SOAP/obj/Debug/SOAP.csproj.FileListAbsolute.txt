@@ -1,0 +1,7 @@
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\obj\Debug\SOAP.csproj.CoreCompileInputs.cache
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\bin\SOAP.dll.config
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\bin\SOAP.dll
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\bin\SOAP.pdb
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\obj\Debug\SOAP.dll
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\obj\Debug\SOAP.pdb
+D:\Projects\Software_Analysis_and_Design\U6_Project_WCF\BMI_Calculator\SOAP\obj\Debug\SOAP.csprojAssemblyReference.cache
