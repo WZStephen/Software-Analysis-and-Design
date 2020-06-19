@@ -59,17 +59,17 @@ namespace BMI_Calculator
 
                 //BMI RESTful API call
                 WebClient channel = new WebClient();
-                byte[] abc = channel.DownloadData(completeSecretUri);
-                Stream strm = new MemoryStream(abc);
+                byte[] bytes = channel.DownloadData(completeSecretUri);
+                Stream stream = new MemoryStream(bytes);
                 DataContractSerializer obj = new DataContractSerializer(typeof(double));
-                string bmi = obj.ReadObject(strm).ToString();
+                string bmi = obj.ReadObject(stream).ToString();
 
                 //healthIndicator RESTful API call
                 WebClient channel2 = new WebClient();
-                byte[] abc2 = channel2.DownloadData(completeSecretUri2);
-                Stream strm2 = new MemoryStream(abc2);
+                byte[] bytes2 = channel2.DownloadData(completeSecretUri2);
+                Stream stream2 = new MemoryStream(bytes2);
                 DataContractSerializer obj2 = new DataContractSerializer(typeof(string));
-                string healthIndicator = obj2.ReadObject(strm2).ToString();
+                string healthIndicator = obj2.ReadObject(stream2).ToString();
 
                 rest_bmi_label.Text = bmi;
                 rest_indicator_label.Text = healthIndicator;

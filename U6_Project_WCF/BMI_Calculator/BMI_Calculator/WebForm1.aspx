@@ -36,7 +36,7 @@
         <asp:Label ID="Label4" runat="server" Text="SOAP Service Call"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label6" runat="server" Text="BMI:"></asp:Label>
-&nbsp;<asp:Label ID="soap_bmi_label" runat="server" Text="Label"></asp:Label>
+&nbsp;<asp:Label ID="soap_bmi_label" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label8" runat="server" Text="Health Indicator:"></asp:Label>
 &nbsp;<asp:Label ID="soap_indicator_label" runat="server" Text="Label"></asp:Label>
@@ -50,7 +50,7 @@
         <asp:Label ID="Label5" runat="server" Text="REST Service API"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label7" runat="server" Text="BMI:"></asp:Label>
-&nbsp;<asp:Label ID="rest_bmi_label" runat="server" Text="Label"></asp:Label>
+&nbsp;<asp:Label ID="rest_bmi_label" runat="server"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label9" runat="server" Text="Health Indicator:"></asp:Label>
 &nbsp;<asp:Label ID="rest_indicator_label" runat="server" Text="Label"></asp:Label>
