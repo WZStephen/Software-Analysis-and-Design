@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Net;
 using System.Runtime.Serialization;
 using System.IO;
+using System.Drawing;
+using System.Globalization;
 
 namespace BMI_Calculator
 {
@@ -32,6 +34,22 @@ namespace BMI_Calculator
                 string healthIndicator = soap_proxy.healthIndicator(height_int, weight_int);
                 soap_bmi_label.Text = bmi.ToString();
                 soap_indicator_label.Text = healthIndicator;
+                if (bmi < 18)
+                {
+                    soap_indicator_label.ForeColor = Color.Blue;
+                }
+                else if (bmi >= 18 && bmi <= 25)
+                {
+                    soap_indicator_label.ForeColor = Color.Green;
+                }
+                else if (bmi >= 25 && bmi <= 30)
+                {
+                    soap_indicator_label.ForeColor = Color.Purple;
+                }
+                else {
+                    soap_indicator_label.ForeColor = Color.Red;
+                }
+
             }
             catch (Exception ex) {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid input')", true);
@@ -73,6 +91,25 @@ namespace BMI_Calculator
 
                 rest_bmi_label.Text = bmi;
                 rest_indicator_label.Text = healthIndicator;
+
+                double d1 = double.Parse(bmi, CultureInfo.InvariantCulture);
+                if (d1 < 18)
+                {
+                    rest_indicator_label.ForeColor = Color.Blue;
+                }
+                else if (d1 >= 18 && d1 <= 25)
+                {
+                    rest_indicator_label.ForeColor = Color.Green;
+                }
+                else if (d1 >= 25 && d1 <= 30)
+                {
+                    rest_indicator_label.ForeColor = Color.Purple;
+                }
+                else
+                {
+                    rest_indicator_label.ForeColor = Color.Red;
+                }
+
             }
             catch (Exception ex) {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid input')", true);
